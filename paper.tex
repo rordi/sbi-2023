@@ -1,0 +1,163 @@
+\documentclass{article}
+
+\usepackage{arxiv}
+
+\usepackage{hyperref}       % hyperlinks (but not footnotes: bug points links to titlepage)
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage[T1]{fontenc}	% font encoding
+\usepackage{palatino}		% font typefaces
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{setspace}		% line spacing
+\usepackage{etoolbox}		% for conditional statements
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\newcolumntype{s}{>{\hsize=.05\hsize}X}
+\newcolumntype{m}{>{\hsize=.2\hsize}X}
+\newcolumntype{l}{>{\hsize=.4\hsize}X}
+\usepackage{pdflscape}
+\usepackage{doi}
+\renewcommand{\doitext}{}	% avoid "doi: doi:" in references lists
+
+\usepackage{xcolor}
+
+% References format
+\usepackage[natbibapa]{apacite} % APA 6th ed. styling for citations and references list
+\bibliographystyle{apacite}
+
+
+\graphicspath{{figures/}}
+
+%%
+%% Circled numbers
+%%
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+	\scriptsize\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+
+%%
+%% Line spacing
+%%
+\setstretch{1.32}
+
+
+%%
+%% Paper cover page
+%%
+\title{... as a Strategic Business Innovation within the Digital Ecosystem of AI-powered Career Counseling}
+
+\author{Dietrich Rordorf\\
+	\\
+	School of Business \\
+	University of Applied Sciences and Arts Northwestern Switzerland \\
+	Riggenbachstrasse 16 \\
+	CH-4600 Olten \\
+	Switzerland \\
+	E-mail: \href{mailto:dietrichhanspaul.rordorf@students.fhnw.ch}{dietrichhanspaul.rordorf@students.fhnw.ch} \\
+	\\
+	\\
+	Supervisors / Lecturers:
+	\AND Prof. Dr. Dino Schwaferts
+	\AND Prof. Dr. Michael von Kutzschenbach
+	\AND Dr. Barbara Eisenbart
+	\AND Prof. Dr. Stella Gatziu Grivas
+}
+
+\date{
+	MSc Business Information Systems Program \\
+	Strategic Business Innovation (SBI), SS 2023
+}
+
+% Uncomment to override  the `A preprint' in the header
+\renewcommand{\headeright}{Draft v1}
+\renewcommand{\undertitle}{Semester Paper}
+\renewcommand{\shorttitle}{Strategic Business Innovation}
+
+%%% Links within PDF and PDF metadata
+\hypersetup{
+	unicode=true,
+	bookmarksopen={true},
+	pdffitwindow=true,
+	colorlinks=true,
+	allcolors=black,
+	%hidelinks=false,
+	%hyperfootnotes=false,
+	pdfstartview={FitH},
+	pdfpagemode=UseNone,
+	pdfauthor={Dietrich Rordorf},
+}
+
+\begin{document}
+
+%%% Title page
+\maketitle
+
+%%% Declaration of Good Faith
+\newpage
+\input{content/00_declaration}
+
+%%% Abstract
+\newpage
+\input{content/01_abstract}
+
+%%% Table of contents
+\newpage
+\tableofcontents
+
+%%% Content sections
+\newpage
+\input{content/02_introduction}
+
+%%% Customer perspective
+\newpage
+\input{content/03_customer_perspective}
+
+%%% Drivers
+\newpage
+\input{content/04_drivers}
+
+%%% Enablers
+\newpage
+\input{content/05_enablers}
+
+%%% Business Model
+\newpage
+\input{content/06_business_model}
+
+%%% Contribution from Innovation
+\newpage
+\input{content/07_contribution}
+
+%%% Evaluation
+\newpage
+\input{content/08_evaluation}
+
+%%% System Fit
+\newpage
+\input{content/09_system_fit}
+
+%%% Conclusions
+\newpage
+\input{content/10_conclusion}
+
+%%% References
+\newpage
+\bibliography{references}
+
+%%% List of Figures
+\newpage
+\listoffigures
+
+%%% List of Tables
+\newpage
+\listoftables
+
+%%% Appendix
+\newpage
+\appendix
+\input{content/99_appendix}
+
+\end{document}
