@@ -6,14 +6,29 @@ evolve over the next few years, see, e.g., \cite{chuiHowGenerativeAI2022}. Many 
 AI in general and generative AI in particular will affect their industries and ecosystems. Once such industry is
 career counseling, which is also known as career guidance. Career counseling is the discipline and set of services
 related to designing career paths and consulting individuals regarding their career opportunities.
+In this paper we explore a new innovative business model in career counseling based on co-creation, namely an AI-powered
+career counseling service based on the latest generation of generative AI technologies. This new business model is
+embedded in a social and digital ecosystem of career counseling by leveraging the vast amount of data of the most powerful
+company in terms of professionals' career data, i.e., LinkedIn\footnote[1]{\url{https://www.linkedin.com}}.
 
-In this paper we explore a new innovative business model in career counseling, namely AI-powered career counseling
-embedded in a social and digital ecosystem of career counseling. We will first describe the customer perspective of
-this business model using the Value Proposition Canvas \citep{osterwalderValuePropositionDesign2014}. In particular,
-we will look at  the customer perspective in terms of possible customer segments and their respective needs
-(\textit{gains} and \textit{pains}) in Section \ref{sec:customer_perspective}. Further, we will describe the drivers
-and enablers of this new business model. Drivers encompass societal, technological and environmental trends and
-developments that make this business model possible and are described in Section \ref{sec:drivers}. Enablers encompass
+Digital ecosystems can be described as a complex, self-organizing, and adaptive system of actors (including current and
+potential competitors) and other stakeholders that are connected through digital platforms in order to create and exchange
+value. More specifically, \cite{adnerEcosystemStructureActionable2017} defines an ecosystem as follows: an \textit{``[...]
+ecosystem is defined by the alignment structure of the multilateral set of partners that need to interact in order for a
+focal value proposition to materialize.''} By alignment structure, Adner refers to the mutual understanding and agreement
+of the position of different actors in the ecosystem, i.e., the roles they play and the relationships they have with each other
+\citep[p. 42]{adnerEcosystemStructureActionable2017}. While by ``multilateral'' and ``set of partners'' Adner refers to
+the fact that the ecosystems are composed of a multitude of actors, but also that these actors are members of the ecosystem
+and share the same goal of join value creation \citep[p. 42-43]{adnerEcosystemStructureActionable2017}. Digital ecosystems
+have gained tremendous importance over the last few years and translate into business growth and success for companies
+\citep{weillThrivingIncreasinglyDigital2015}.
+
+The remainder of the paper is built as follows. We will first describe the customer perspective of this business
+model using the Value Proposition Canvas \citep{osterwalderValuePropositionDesign2014}. In particular, we will look
+at the customer perspective in terms of possible customer segments and their respective needs (\textit{gains} and
+\textit{pains}) in Section \ref{sec:customer_perspective}. Further, we will describe the drivers and enablers of
+this new business model. Drivers encompass societal, technological and environmental trends and developments that
+make this business model possible and are described in Section \ref{sec:drivers}. Enablers encompass 
 the resources available to the innovating company thereby increasing the likelihood of realization and viability of the
 new business model, and are described in Section \ref{sec:enablers}. Then, we will describe the business model itself
 using the Business Model Canvas \citep{osterwalderBusinessModelGeneration2010} in Section \ref{sec:business_model}.
@@ -22,43 +37,82 @@ resources, key activities, key partnerships, revenue streams, and cost structure
 Further, we will detail the specific contribution of (strategic) innovation in this business model in Section
 \ref{sec:contribution}. We will then evaluate the business model in terms of its viability and feasibility in Section
 \ref{sec:evaluation}. Finally, we will describe the fit of this business model with the system in which it is embedded
-in Section \ref{sec:system_fit}. We will conclude with a summary of our findings in Section \ref{sec:conclusion}.
+in Section \ref{sec:system_fit}, and conclude with a summary of our findings in Section \ref{sec:conclusion}.
 
-In the remainder of this section, we will give a background on career counseling as well as the strategic innovation
-potential that stems from the latest generation of AI technologies.
+In the remainder of this section, we will give a background on career counseling as well as the strategic
+innovation potential that stems from the latest generation of AI technologies applied to this industry. This 
+background information is based on the previous results of a literature review conducted as part of the course
+``Strategic Business Innovation'' at the University of Applied Sciences and Arts Northwestern Switzerland (FHNW)
+\citep{kaserAIpoweredCareerCounseling2023}.
 
 \subsection{Career Counseling}
 
-Specifically, the services
-in career counseling include:
+Career counseling entails the discipline and set of services related to designing career paths and consulting
+clients regarding their career opportunities. It is provided by career counselors, which are professionals that
+are typically trained in psychology, counseling, and career development. A career counselor's job is to assess 
+a client's individual preferences, intelligence, skill sets, work values, and experience in order to help them
+find a suitable career path under consideration of the current educational, work, and community contexts
+\citep{americanpsychologicalassociationCareerCounseling}. Career counseling services are typically demanded by
+three groups: (1) individuals that are in the process of choosing a career, i.e., students that are about to enter
+the job market; (2) individuals that are in the process of optimizing or entirely changing their career, i.e.,
+by changing into a different role or different industry; and (3) unemployed individuals that are in the process
+of reintegrating the job market. Further, in this paper will argue for another customer segment, namely companies
+engaged in the ``war for talent'' that are looking for ways to \textit{retain} and further develop talent that
+already works for them. Although they are not direct beneficiaries of career counseling services, they are
+indirect beneficiaries in the sense that they benefit from the increased productivity and satisfaction of their
+employees.
 
-\begin{itemize}
-    \item Career Assessment: Assessment of the traits of the client, including identifying their preferences,
-            strengths, skills, and values and matching those with suitable career paths.
-    \item Development \& Training
-    \item Job Search Assistance
-    \item Career Transitions
-    \item Entrepreuneurship-related services
-\end{itemize}
+Services in career counseling specifically include services in five areas: (1) career assessment, (2) development
+\& training, (3) job search assistance, (4) career transitions, and (5) entrepreuneurship-related services.
+\textit{Career assessment} services entail the assessment of the traits of the client, including identifying their
+preferences, strengths, skills, and values and matching those with suitable career paths. \textit{Development
+\& training} services entail the development of the client's skills and competencies in order to prepare them
+for a specific career path or fill skill gaps. \textit{Job search assistance} services entail assisting clients
+in finding a job, including identifying suitable job opportunities, preparing for job interviews, and writing
+job applications. \textit{Career transition} services entail planning and guiding clients through a transition
+into a new role and/or career path, including identifying suitable career paths. Finally, with
+\textit{entrepreuneurship-related services} counselors support clients in starting a business, including identifying
+suitable business opportunities, writing business plans, and assisting with incorporating. Entrepreuneurship-related
+services within career counseling are typically offered by career counselors in job centers as one possible way to
+reintegrate unemployed individuals.
 
-While LinkedIn is arguably the most dominant player in terms of employee data in Western countries,
-there are plenty of other companies that have access to employee data. However, the databases of competitors are
-not as large as LinkedIn's or are focused on a particular country or regions. While these databases are certainly
-relevant in some career paths and countries, they are not as relevant in others or for international careers.
+\subsection{Applying AI in Career Counseling}
 
-% @TODO fact check the whole paragraph - if this is all true, this can be an interesting addition!
-In Germany, there is Xing, which is a German company that is also active in Switzerland and Austria.
-In China, there is Maimai, which is
-a Chinese company that is also active in China. In India, there is Naukri, which is an Indian company that is also
-active in India. In Russia, there is HeadHunter, which is a Russian company that is also active in Russia. In Japan,
-there is Wantedly, which is a Japanese company that is also active in Japan. In South Korea, there is Saramin, which
-is a South Korean company that is also active in South Korea. In Brazil, there is Vagas, which is a Brazilian company
-that is also active in Brazil. In Mexico, there is OCC, which is a Mexican company that is also active in Mexico.
-In the United States, there is Indeed, which is an American company that is also active in the United States. In
-Canada, there is Workopolis, which is a Canadian company that is also active in Canada. In Australia, there is
-Seek, which is an Australian company that is also active in Australia. In New Zealand, there is Trade Me, which is
-a New Zealand company that is also active in New Zealand. In South Africa, there is CareerJunction, which is a
-South African company that is also active in South Africa. In Nigeria, there is Jobberman, which is a Nigerian
-company that is also active in Nigeria.
+The use of technological innovation and AI in career counseling has been researched before. According to
+\cite{westmanArtificialIntelligenceCareer2021} and cited in \cite{kaserAIpoweredCareerCounseling2023}, applying
+technological innovation in career counseling can lead to the following benefits: \textit{``improved accessibility,
+increased access to information, automating assessments and coaching, network effects (e.g., on multisided platforms),
+improved cost-effectiveness, and new types of services''}.
 
-\subsection{Potential for AI Tools in Career Counseling}
+Further, \cite{westmanArtificialIntelligenceCareer2021} identified that AI could play a number of roles in career
+counseling in the educational setting of schools and universities where students are in the process of choosing a career
+path. They identified four roles for AI, including as coach, collaborator, assistant, and tool \citep{westmanArtificialIntelligenceCareer2021}.
+By \textit{AI as coach} they refer to the use of AI as a virtual coach to provide career counseling services to clients; by
+\textit{AI as collaborator} they refer to the use of AI to support career counselors in their work as a joint team; by
+\textit{AI as assistant} they refer to counselors using AI in specific areas and validating the AI results on a case-by-case
+basis; finally, by \textit{AI as tool} they refer to the use of AI for single, narrowly defined tasks, such as a job recommendation
+engine based on a client's skills profile \citep{westmanArtificialIntelligenceCareer2021}.
+
+\subsection{The Digital Ecosystem of Career Counseling}
+
+The digital ecosystem of career counseling is composed of a multitude of actors, including career counselors, clients,
+and companies. Career counselors are the service providers, whilst clients are the recipients of career counseling services.
+Companies can either be beneficiaries of the services that career counselors provide to clients, or they can actively engage
+as a member of the digital ecosystem surrounding career counseling. Such members may offer digital platforms and services
+that are used by career counselors, clients, or both. The most prominent example of such a platform is LinkedIn, which
+is primarily used by clients as a professional social network and to find jobs. Another example is the Chinese professional
+social network MaiMai\footnote[2]{\url{https://maimai.cn/}}. Other types of platforms include specialized job search engine
+ (such as Indeed, Glassdoor, or Monster), career assessment platforms (such as ChoiZy, Uncavo, or WouldYouRatherBe), or
+ e-learning platforms (such as LinkedIn Learning, Udemy, or Coursera).
+
+According to the definition of digital ecosystems introduced previously, career counseling can not strictly be considered
+a digital ecosystem yet. While it meets part of the definition in terms of multilateral relationships between actors, it
+fails to meet the criteria of a \textit{set of partners} that pursue a common goal of join value creation \citep{adnerEcosystemStructureActionable2017}.
+The reason for this is that the digital ecosystem of career counseling is not yet a fully integrated ecosystem, but rather
+a collection of loosely coupled actors that may also use different platforms for different use cases. The situation of 
+career counseling thus presents enormous potential for strategic innovation by bringing all actors together and integrating
+them into a fully connected digital ecosystem of career counseling.
+
+The remainder of this paper will introduce a new business model of \textit{Career-Counseling-as-a-Service} (CCaaS) that
+integrates actors via API-based services, and will systematically explore its potential. We will evaluate the business
+model in terms of its customer centricity, technical and societal feasibility, economic viability and system fit.
