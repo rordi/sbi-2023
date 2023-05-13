@@ -28,7 +28,6 @@
 \usepackage[natbibapa]{apacite} % APA 6th ed. styling for citations and references list
 \bibliographystyle{apacite}
 
-
 \graphicspath{{figures/}}
 
 %%
@@ -37,6 +36,7 @@
 \usepackage{tikz}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
 	\scriptsize\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+
 
 %%
 %% Line spacing
@@ -81,8 +81,10 @@
 	unicode=true,
 	bookmarksopen={true},
 	pdffitwindow=true,
-	colorlinks=true,
-	allcolors=black,
+	colorlinks=false,
+	urlbordercolor=cyan,
+	linkbordercolor=cyan,
+	citebordercolor=cyan,
 	%hidelinks=false,
 	%hyperfootnotes=false,
 	pdfstartview={FitH},
