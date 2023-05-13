@@ -21,7 +21,7 @@ focal value proposition to materialize.''} By alignment structure, Adner refers 
 of the position of different actors in the ecosystem, i.e., the roles they play and the relationships they have with each other
 \citep[p. 42]{adnerEcosystemStructureActionable2017}. While by ``multilateral'' and ``set of partners'' Adner refers to
 the fact that the ecosystems are composed of a multitude of actors, but also that these actors are members of the ecosystem
-and share the same goal of join value creation \citep[p. 42-43]{adnerEcosystemStructureActionable2017}. Digital ecosystems
+and share the same goal of a joint value creation \citep[p. 42-43]{adnerEcosystemStructureActionable2017}. Digital ecosystems
 have gained tremendous importance over the last few years and translate into business growth and success for companies
 \citep{weillThrivingIncreasinglyDigital2015}.
 
@@ -102,16 +102,17 @@ and companies. Career counselors are the service providers, whilst clients are t
 Companies can either be beneficiaries of the services that career counselors provide to clients, or they can actively engage
 as a member of the digital ecosystem surrounding career counseling. Such members may offer digital platforms and services
 that are used by career counselors, clients, or both. The most prominent example of such a platform is LinkedIn, which
-is primarily used by clients as a professional social network and to find jobs. Another example is the Chinese professional
-social network MaiMai\footnote[2]{\url{https://maimai.cn/}}. Other types of platforms include specialized job search engine
- (such as Indeed, Glassdoor, or Monster), career assessment platforms (such as ChoiZy, Uncavo, or WouldYouRatherBe), or
- e-learning platforms (such as LinkedIn Learning, Udemy, or Coursera).
+is primarily used by clients as a professional social network and to find jobs. Parts of the current ecosystem surrounding
+LinkedIn are depicted in Figure \ref{fig:ecosystem}. Other types of platforms include specialized job search engine  (such as
+Indeed and Glassdoor), career assessment platforms (such as ChoiZy or Uncavo), or e-learning platforms (such as Udemy or Coursera).
+However, many of these offerings are scattered across different platforms and not integrated as part of a digital ecosystem. For
+example, a client may use LinkedIn to find a job, but use Coursera to learn new skills.
 
- \begin{figure}[h!]
+ \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=0.9\textwidth]{ecosystem-pre-innovation.pdf}
-    \caption{The LinkedIn ecosystem before applying the innovation (own illustration).}
+    \caption{The LinkedIn ecosystem before applying the innovation, where LinkedIn controls the value creation (own illustration).}
     \label{fig:ecosystem}
+    \includegraphics[width=0.9\textwidth]{ecosystem-pre-innovation.pdf}
 \end{figure}
 
 According to the definition of digital ecosystems introduced previously, career counseling can not strictly be considered
@@ -122,15 +123,25 @@ a collection of loosely coupled actors that may also use different platforms for
 career counseling thus presents enormous potential for strategic innovation by bringing all actors together and integrating
 them into a fully connected digital ecosystem of career counseling.
 
-The remainder of this paper will introduce a new business model of \textit{Career-Counseling-as-a-Service} (CCaaS) that
-integrates actors via API-based services, and will systematically explore its potential. We will evaluate the business
-model in terms of its customer centricity, technical and societal feasibility, economic viability and system fit. The
-following Section \ref{sec:customer_perspective} introduces the customer perspective.
-
+A true digital ecosystem could be created by integrating the services of other actors into the LinkedIn ecosystem.
+The key idea of the innovation is to add an API layer on top of LinkedIn that allows career counselors to access and leverage
+on the data, recommendation engines, and machine learning models deployed by LinkedIn. By using the API layer, the career
+counselors can be taken aboard the digital ecosystem. Also, new start-up companies may offer counseling services on top of 
+API layer to the other companies in the ecosystem. By using the API layer, counselors and other participating companies can
+participate in the value creation by providing additional, refined data to LinkedIn. LinkedIn can use that data to further
+improve the services and train even better machine learning models. For instance, career counselors may provide a feedback
+on recommendations provided by LinkedIn, which can be used to further refine the recommendation engine. The resulting digital
+ecosystem is depicted in Figure \ref{fig:ecosystem-ccaas}. We term this new business model \textit{Career-Counseling-as-a-Service}
+(CCaaS).
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{ecosystem-ccaas.pdf}
-    \caption{Future state of a true digital ecosystem built around LinkedIn on top of a new CCaaS API layer (own illustration).}
+    \caption{Future state of a true digital ecosystem built around LinkedIn on top of a new CCaaS API layer. Counselors and
+    start-ups join the digital ecosystem and participate in the value creation (own illustration).}
     \label{fig:ecosystem-ccaas}
+    \includegraphics[width=0.85\textwidth]{ecosystem-ccaas.pdf}
 \end{figure}
+
+The remainder of this paper will systematically explore the potential of CCaaS by evaluating the business
+model in terms of its customer centricity, technical and societal feasibility, economic viability and system fit. 
+The next Section \ref{sec:customer_perspective} introduces the customer perspective.
