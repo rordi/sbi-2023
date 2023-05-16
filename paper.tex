@@ -34,8 +34,8 @@
 %% Circled numbers
 %%
 \usepackage{tikz}
-\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
-	\scriptsize\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+\newcommand*\circled[1]{\noindent\tikz[baseline=(char.base)]{
+	\scriptsize\node[shape=circle,draw,inner sep=1pt] (char) {#1};}~~}
 
 
 %%

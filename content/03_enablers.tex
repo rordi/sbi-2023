@@ -1,12 +1,11 @@
 \section{Enablers}
 \label{sec:enablers}
 
-This section describes the enablers, which are the prerequisites that the innovating company brings
-(or still has to fulfil) and that must match with the customer perspective that we introduced
-in the previous section. Enablers can be based on the uniqueness of the company (i.e., its offering can not
-easily be copied by competitors) or on operational excellence (i.e., the company is able to provide its
-offering at a significantly lower cost than its competitors). The enablers are added to the company-side
-of the \emph{Value Proposition Canvas} \citep{osterwalderValuePropositionDesign2014}.
+This section describes the enablers, which are the prerequisites that company brings ti the table and that
+must match with the customer perspective that we introduced in the previous section. Enablers can be based
+on the uniqueness of the company (i.e., its offering can not easily be copied by competitors) or on operational
+excellence (i.e., the company is able to provide its offering at a significantly lower cost than its competitors).
+The enablers are added to the company-side of the \emph{Value Proposition Canvas} \citep{osterwalderValuePropositionDesign2014}.
 
 \subsection{Uniqueness}
 
@@ -14,7 +13,7 @@ LinkedIn can provide a new service, i.e., \textit{Career Counseling as a Service
 unique position in the market, its broad access to career and job data, and access to state-of-the-art 
 AI technology and machine learning algorithms.
 
-\subsubsection*{Market Position}
+\subsubsection{Market Position}
 
 LinkedIn is the world's largest professional network with more than 900 million members in over 200 countries
 worldwide \citep{linkedinLinkedInPressromUs2023}. LinkedIn has a unique position in the market, see e.g.,
@@ -28,7 +27,7 @@ worldwide \citep{linkedinLinkedInPressromUs2023}. LinkedIn has a unique position
     \item 50 million job searches per week (the widest reach in many Western countries)
 \end{itemize}
 
-\subsubsection*{Access to Data}
+\subsubsection{Access to Data}
 
 LinkedIn is one of very few companies that has access to the data of such a massive user base, including
 very granular data on users' education, work experience, skills, and interests. LinkedIn also has access
@@ -42,7 +41,7 @@ structure can be used to train graph-based machine learning algorithms that can 
 than traditional machine learning algorithms due to overcoming data sparsity and cold start problems
 \citep{zhangRecommendingGraphsComprehensive2023}.
 
-\subsubsection*{Access to Technology and AI}
+\subsubsection{Access to Technology and AI}
 
 LinkedIn is part of Microsoft, one of the world's largest technology companies. Microsoft has invested heavily
 in artificial intelligence (AI) and machine learning (ML) in recent years, including owning a stake in the hottest
@@ -54,42 +53,178 @@ LinkedIn has similarly access to Microsoft's and OpenAI's AI and ML technologies
 
 \subsection{Operational Excellence}
 
-\subsubsection*{Low Cost}
-
-\cite{floereckeSuccessFactorsSaaS2018} researched success factors for software-as-a-service (SaaS) business models. As 
-main factor he found that \textit{``SaaS service[s] should be developed as a system comprising modular microservices
-in order to meet the desired requirements in terms of cost advantages, performance and scalability''}. Accordingly, a
-CCaaS business model should be designed as a system comprising modular microservices that are offered via an API layer.
-LinkedIn can increase adoption by career counselors by offering a marketplace for career counselors that provides
-no-code access to the CCaaS API layer. This allows career counselors to use the CCaaS services without the need 
-of a full and costly technical integration of the API.
-
-\subsubsection{Mastering Scale}
+\subsubsection{Master of Scale}
 
 LinkedIn has successfully mastered scaling challenges in the past, including a phase of hypergrowth. As a result
 LinkedIn has a proven track record in architecting scalable software systems based on a microservices approach
-\citep{linkedinBriefHistoryScaling2015}.
+\citep{linkedinBriefHistoryScaling2015}. 
 
+\subsubsection{Master of Speed}
+
+LinkedIn suffered major architectural challenges after its IPO. Subsequently, LinkedIn engineering teams mastered a
+revamp of its systems architecture and developer tooling, putting them ahead of competitors in terms of speed of
+experimenting, iterating and new feature delivery \citep{vanceOperationInVersionCode2013}.
+
+\subsubsection{Master of Cost}
+
+\cite{floereckeSuccessFactorsSaaS2018} researched success factors for software-as-a-service (SaaS) business models and
+found the main one to be that \textit{``SaaS service[s] should be developed as a system comprising modular microservices
+in order to meet the desired requirements in terms of cost advantages, performance and scalability''}. Accordingly, CCaaS
+should be designed as a system of modular microservices that are offered via an API layer. Further, adoption by career
+counselors can be facilitated via a marketplace for career counselors and low/no-code solutions. This allows for leveraging
+CCaaS services without fully, costly technical integration of the API.
+
+\subsection{Products \& Services}
+
+The services provided as part of CCaaS can be offered as a bundle or individually. Based on the microservices
+approach, the counseling service providers can choose which API endpoints they want to use and integrate into 
+their offerings. They may for instance continue to use their integration of Coursera or Udemy to recommend
+trainings to their customers (e.g., based on pre-existing subscriptions of their clients to these training 
+platforms). However, they may want to use the job search and career path recommender service from the LinkedIn
+CCaaS offering due to their richer data and better AI models. LinkedIn's CCaaS offering should encompass the
+following services:
+\newline
+
+\circled{1}\textit{Build AI Models for Career Counseling:}
+    Build the AI models for career counseling based on the data that LinkedIn has access to, including
+    user profiles, skills, educations, job postings, and feedback data from career counselors participating in CCaaS.
+    \vspace{0.2cm}
+
+\circled{2}\textit{Job Search \& Recommendations:}
+    Based on semantic search: search and recommend jobs based on similarity with the user's profile leveraging
+    word embeddings and graph embeddings.
+    \vspace{0.2cm}
+
+\circled{3}\textit{Career Path Recommendations:}
+    Recommend career paths based on the similarity of the user's profile and  similar users' career paths
+    leveraging graph embeddings.
+    \vspace{0.2cm}
+
+\circled{4}\textit{Training Recommender:}
+    Recommend trainings to a user based on profile and chosen career path (help user fill skill gaps
+    required for career path).
+    \vspace{0.2cm}
+
+\circled{5}\textit{Career Counselor Recommender:}
+    Recommend career counselors based on the user's profile, the counselors' past customers, geographic 
+    proximity, and other factors.
+    \vspace{0.2cm}
+
+\circled{6}\textit{API Layer:}
+    Provide all CCaaS services as reliable, highly available, and scalable API endpoints.
 
 \subsection{Gain Creators}
 
+Gain creators describe how the products and services of a company create gains for the customer. In the
+case of CCaaS, the gain creators are the services that are provided (via the career counselors) to the end
+customers like Sarah. Gain creator should match the gains introduced in the customer perspective.
+
+\begin{itemize}
+    \item Enable career counselors to provide semi-automated but highly personalized career counseling
+    \item Provide insights and better recommendations for career paths, jobs, and trainings through superior AI models
+    \item Enable self-service career counseling platforms
+\end{itemize}
+
 \subsection{Pain Relievers}
+
+Similarly to gain creators, pain relievers describe how the products and services of a company relieve
+the pains that are experienced by the customers.
+
+\begin{itemize}
+    \item Reduce costs by shared AI models and shared infrastructure
+    \item Increase efficiency in career counseling 
+    \item Provider better insights and recommendations through broader and more granular data
+\end{itemize}
+
+\begin{figure}[h!]
+    \centering
+    \caption{The full Value Proposition Canvas with customer- and company side (background illustration adapted from Strategyzer.com).}
+    \label{fig:vpc_full}
+    \includegraphics[width=\linewidth]{vpc_full.pdf}
+\end{figure}
 
 \subsection{Customer Centricity: Addressing Customer Needs}
 
-\subsection{Need For Collaboration \& Co-creation}
+By combining the customer-side and the company-side of the value proposition canvas, we can identify
+the services that relate to customer jobs via either gains and gain creators or pains and pain relievers.
+This is illustrated in Figure \ref{fig:vpc_full}. Table \ref{tab:vpc} summarizes how the services connect
+with the customer jobs and thus ensure a high customer-centricity of the business model that we will develop
+in the next section. Some common gains and pains and matching gain creators and pain relievers are listed as 
+part of the jobs to be done.
 
-LinkedIn is not specialized in career counseling but is a social network that connects professionals. It is not
-LinkedIn's core business to provide career counseling. Therefore, LinkedIn needs to collaborate with specialized
-companies that can provide these specialized career counseling services. Also, career counselors may work at different
-locations around the world. For instance, our persona Sarah may wish to receive personal career coaching on-site at
-her university in Zurich. LinkedIn is a digital platform that does not offer any physical presence points. Yet, LinkedIn
-sits atop a mountain of valuable career data from its 900+ million members. This data can be used by LinkedIn to provide
-highly specialized, machine learning based services. For instance, LinkedIn can provide a service that recommends career
-counselors to its members based on their profile data. Career counselors can access machine learning based recommendations
-of career paths for their clients using the CCaaS API layer. LinkedIn could design the CCaaS API layer in a way that career
-counselors could actively or passively leave feedback on the job recommendations and career path recommendations provided
-by LinkedIn, thereby helping LinkedIn to collect additional, refined data which are useful to further improve its machine
-learning models. Both, LinkedIn and career counselors, thereby actively contribute to a higher value creation for the
-clients that was not possible before. The CCaaS API layer presents a win-win(-win) situation for all three engaged parties:
-LinkedIn, the counselors and the counseling clients.
+\begin{table}[htb]
+    \caption{
+        Connecting customer jobs with services via gains / gain creators and pain / pain relievers.
+    }
+    \label{tab:vpc}
+
+    \tiny
+    \renewcommand{\arraystretch}{1.1}
+    \small\centering
+    \setlength\tabcolsep{8pt}
+    \begin{tabularx}{\linewidth}{m m m m}
+        \toprule
+        \textbf{Customer Job} & \textbf{Gains / Pains} & \textbf{Creators / Relievers} & \textbf{Services} \\
+        \toprule
+
+        Find job that matches &
+            2 &
+            3 &
+            4 \\ 
+        \midrule
+        
+        Learn relevant skills &
+            Insights into commonly successful career paths &
+            Better insights through superior AI &
+            Training recommendations\newline
+            Career path recommendations\\ 
+        \midrule
+
+        Professional \& personal growth &
+            2 &
+            3 &
+            Training recommendations\newline
+            Career path recommendations\\ 
+        \midrule
+
+        Advance career, responsibility, role &
+            2 &
+            3 &
+            4 \\ 
+        \midrule
+
+        Increase income &
+            2 &
+            3 &
+            4 \\ 
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\subsection{Value Co-Creation Through Collaboration}
+
+The direct customers of LinkedIn's new CCaaS service will be independent career counselors, counseling companies, 
+counselors at educational institutions and job centers. Further, new start-up companies may emerge taking advantage
+of the CCaaS API and potentially combining it with other offerings, such as integrating with assessment platforms 
+or learning platforms (Coursera, Udemy, etc.). However, the end customers of the CCaaS service are the clients of
+the counselors that we introduced in the customer perspective. As LinkedIn is not specialized in career counseling
+but is a social network that connects professionals, it is not its core business to provide career counseling.
+Therefore, LinkedIn needs to collaborate with these specialized counselors that can provide specialized career
+counseling services. Also, career counselors may work at different locations around the world. For instance, our
+persona Sarah may wish to receive personal career coaching on-site at her university in Zurich. The combination of
+the CCaaS offering and counselors specialized knowledge, experience and geographical distribution will provide
+the end customers with a unique value proposition that is not available today.
+
+LinkedIn sits atop a mountain of valuable career data from its 900+ million members. Its contribution to the value 
+creation is to provide highly specialized, machine learning based services. For instance, LinkedIn can provide a
+service that recommends career counselors to its members based on their profile data. Career counselors can access
+machine learning based recommendations of career paths for their clients using the CCaaS API layer. LinkedIn could
+design the CCaaS API layer in a way that career counselors could actively or passively leave feedback on the job
+recommendations and career path recommendations provided by LinkedIn, thereby helping LinkedIn to collect additional,
+refined data which are useful to further improve its machine learning models. Both, LinkedIn and career counselors,
+thereby actively contribute to a higher value creation for the clients that was not possible before. The CCaaS API
+layer presents a \textit{win-win-win} situation for all three engaged parties: LinkedIn, the counselors and the
+counseling clients.
+\newline
+
+\noindent In Section \ref{sec:business_model}, we will develop a business model for LinkedIn's CCaaS offering.
