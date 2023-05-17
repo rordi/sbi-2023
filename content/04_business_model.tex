@@ -7,10 +7,9 @@ shows a graphical summary of the business model canvas. The value proposition de
 two sections is inserted into the center of the canvas. In the following we develop the remaining building
 blocks of the canvas.
 
-
 \subsection{Customer Segments}
 
-As developed in Section \ref{sec:customer_perspective} career counseling is used by three customer archetypes:
+As developed in Section \ref{sec:customer_perspective}, career counseling is used by three customer archetypes:
 new job market entrants, professionals in career transition, and unemployed seeking reintegration. However, the
 value proposition is similar for all three types, i.e. the service offerings are the same. Therefore, we can use
 a single customer segment (\textbf{counseling clients}) for all three customer archetypes.
@@ -19,6 +18,8 @@ a single customer segment (\textbf{counseling clients}) for all three customer a
 \subsection{Channels}
 
 Channels are the means by which the clients access the career counseling service offerings from LinkedIn.
+As LinkedIn will be the provider of CCaaS services, most channels will be operated by the intermediaries,
+i.e., counselors and counseling companies.
 
 \begin{itemize}
     \item \textbf{Web}: the CCaaS platform may be used to provide web services to customers.
@@ -32,11 +33,13 @@ Channels are the means by which the clients access the career counseling service
             the customer.
 \end{itemize}
 
-
 \subsection{Customer Relationships}
 
 Customer relationships are the types of relationships that LinkedIn establishes with the career
-counseling clients.
+counseling clients. Based on the platform argument introduced in Section \ref{sec:customer_perspective},
+the relationship may not be a direct one (i.e., between LinkedIn and the customer segment). Instead, 
+the customers have a relationship with a career counselor (or a counseling company) that uses the
+CCaaS API layer to render its counseling services.
 
 \begin{itemize}
     \item \textbf{Personal assistance}: career counselors may individually follow a customer's case and 
@@ -50,10 +53,20 @@ counseling clients.
             these recommendations to the client. 
 \end{itemize}
 
+\begin{landscape}
+        \begin{figure}
+                \centering
+                \caption{Business Model Canvas for CCaaS.}
+                \label{fig:bmc}
+                \includegraphics[width=1.3\textwidth]{figures/bmc.pdf}
+        \end{figure}
+\end{landscape}
+
 \subsection{Key Activities}
 
 Key activities represent the important things that LinkedIn must do to make the CCaaS platform work
-and to offer the career counseling services via its API layer.
+and to offer the career counseling services via its API layer (ultimately enabling the counselors
+to render the value proposition to clients).
 
 \begin{itemize}
     \item \textbf{Data Pipelines}: LinkedIn needs to collect data from its users and store it in
@@ -78,7 +91,23 @@ and to offer the career counseling services via its API layer.
 
 \subsection{Key Resources}
 
-{\color{red} @TODO: add info about key resources}
+Key resources describe the most important tangible assets required to make the business model work. These
+assets may not be owned by LinkedIn, but may be acquired from key partners.
+
+\begin{itemize}
+        \item \textbf{Data:} First and foremost, LinkedIn's data on users, companies, and jobs is the most
+                important asset for the CCaaS business model. The data is used to train effective AI models
+                and recommender systems.
+        \item \textbf{Data Scientists:} LinkedIn's (and by extension via Microsoft and OpenAI) data engineers 
+                and data scientists are a crucial asset for the CCaaS business model. They are responsible for
+                designing data models, architecting and developing data pipelines, training and evaluating
+                AI models and recommender systems, and monitoring and maintaining them once in production.
+        \item \textbf{Servers and GPUs:} servers and GPU's are required for intensive computational tasks 
+                such as training the CCaaS AI models and recommender systems. GPU servers are also needed 
+                for running the services via the API, i.e., at inference time.
+        \item \textbf{AI Models:} the design and architecture of AI models (artificial neural networks) and
+                recommender systems that are used to provide personalized automation in the CCaaS business model.
+\end{itemize}
 
 \subsection{Key Partnerships}
 
@@ -112,4 +141,13 @@ co-creation and rendering the products and services to the end customers.
 
 \subsection{Revenue Streams}
 
-{\color{red} @TODO: add info about key resources, API usage fees, etc.}
+\begin{itemize}
+    \item \textbf{API Usage Fees}: career counseling companies pay usage fees for the CCaaS API.
+        The usage fees are based on the number of calls on the different API endpoints. The pricing
+        may be varied by API endpoint type, such as the type of recommendation (e.g., retrieving
+        job recommendations might be cheaper than retrieving career path suggestions).
+     \item \textbf{LinkedIn Premium:} LinkedIn Premium is an existing product and represents a subscription
+        tier for LinkedIn. It gives premium users  access to advanced features. LinkedIn Premium can be made
+        more attractive by embedding some CCaaS offerings into the premium tier. For example, Premium
+        users may get access the portal for finding a suitable career counselor. 
+\end{itemize}
