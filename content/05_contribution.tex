@@ -5,20 +5,43 @@
 
 \subsection{Assessment of the Innovation}
 
+In the following, we assess the CCaaS innovation from four different angles, namely the customer perspective,
+the technical perspective, the legal perspective, and the sustainability perspective. Through a multi-angled 
+assessment, we can identify risks (and conversely, opportunities) that may arise from the innovation or that
+could render the innovation useless for the customer, financially unviable, or even illegal. As part of the
+assessment we can develop strategies to mitigate the identified risks.
+
 \subsubsection{Customer Perspective}
+
+We have previously introduced the customer perspective on career counseling in Section \ref{sec:customer_perspective}.
+We extend here by embedding the innovation of AI-powered career counseling as a CCaaS API in the context of this 
+customer perspective. The following aspects are relevant in this context:
 
 \begin{itemize}
     \item \textbf{Reduced Costs:}
     \item \textbf{Personalized Service:}
     \item \textbf{Assistive Technologies:}
+    \item \textbf{Avoiding Ethical Issues:} Ethical issues in AI-powered career counseling may include biased AI
+        models, the problem of ``blackbox'' AI models that are not explainable, and Kafkaesque interactions between
+        users and automated systems \citep{kaserAIpoweredCareerCounseling2023}. LinkedIn's CCaaS innovation will avoid 
+        these issues by using a human-in-the-loop approach where specialized career counselors are the interface 
+        to the client, while AI tools are used to assist the counselors in their work. The counselors can intervene
+        whenever they deem it necessary and add reasoned explanations to the recommendations given to clients.
 \end{itemize}
 
 
 \subsubsection{Technical Perspective}
 
-The CCaaS business model builds upon the availability of large amounts of user data and data
-science know-how. The following technical aspects are relevant in relation to career counseling
-as CCaaS offering:
+According to \cite{dornbergerDigitalInnovationDigital2021} technology can play two roles in the context of innovation
+and transformation: new technologies can be enablers of innovation (``digital innovation''), or technology can be 
+required to implement business or management ideas, such as digital ecosystems (``digital business transformation'').
+In the case of CCaaS, we have technology as enabler, i.e., progress in computational power has fueled a renaissance
+of sub-symbolic AI and deep learning in particular. On the other hand, technology---such as shared cloud computing
+infrastructure---has brought costs down and makes it possible to viably offer new business models based on AI,
+thereby enabling digital business transformation.
+
+The CCaaS business model builds upon the availability of large amounts of user data and data science know-how.
+The following technical aspects are particularly relevant in relation to career counseling as CCaaS offering:
 
 \begin{itemize}
     \item \textbf{Data:} LinkedIn already has one of the largest---if not the largest---user database 
@@ -61,8 +84,9 @@ The following legal aspects are relevant in relation to career counseling and th
         paths. Because the CCaaS model does not promote full automation but rather a human-in-the-loop
         approach where specialized career counselors make the final recommendations, LinkedIn is not 
         liable for the outcome of the final recommendations given to users. However, the CCaaS platform
-        should be liable for any damage caused counselors based on downtimes that render CCaaS API services
-        inaccessible to the counselors.
+        should be liable for any damage caused to counselors based on downtimes of the CCaaS API. Downtimes 
+        can be mitigated by well-known strategies for information system design such as redundancy, load
+        balancing, and failover of traffic.
     \item \textbf{Intellectual Property:} the CCaaS platform will use AI models to provide
         recommendations for trainings and career paths. These AI models are based on data collected
         from the users as well as feedback data from counselors. There are currently open questions
@@ -96,6 +120,3 @@ are of particular interest in relation to career counseling and the CCaaS busine
         counseling via CCaaS may hence contribute to widening the gap that is building between the
         highly educated workforce and the low-skilled workforce.
 \end{itemize}
-
-\subsection{Conclusion}
-
