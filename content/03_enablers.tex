@@ -79,40 +79,31 @@ CCaaS services without fully, costly technical integration of the API.
 
 The services provided as part of CCaaS can be offered as a bundle or individually. Based on the microservices
 approach, the counseling service providers can choose which API endpoints they want to use and integrate into 
-their offerings. They may for instance continue to use their integration of Coursera or Udemy to recommend
-trainings to their customers (e.g., based on pre-existing subscriptions of their clients to these training 
-platforms). However, they may want to use the job search and career path recommender service from the LinkedIn
-CCaaS offering due to their richer data and better AI models. LinkedIn's CCaaS offering should encompass the
-following services:
-\newline
+their offerings. LinkedIn's CCaaS offering should encompass the following services:
 
-\circled{1}\textit{Build AI Models for Career Counseling:}
-    Build the AI models for career counseling based on the data that LinkedIn has access to, including
-    user profiles, skills, educations, job postings, and feedback data from career counselors participating in CCaaS.
-    \vspace{0.2cm}
-
-\circled{2}\textit{Job Search \& Recommendations:}
-    Based on semantic search: search and recommend jobs based on similarity with the user's profile leveraging
-    word embeddings and graph embeddings.
-    \vspace{0.2cm}
-
-\circled{3}\textit{Career Path Recommendations:}
-    Recommend career paths based on the similarity of the user's profile and  similar users' career paths
-    leveraging graph embeddings.
-    \vspace{0.2cm}
-
-\circled{4}\textit{Training Recommender:}
-    Recommend trainings to a user based on profile and chosen career path (help user fill skill gaps
-    required for career path).
-    \vspace{0.2cm}
-
-\circled{5}\textit{Career Counselor Recommender:}
-    Recommend career counselors based on the user's profile, the counselors' past customers, geographic 
-    proximity, and other factors.
-    \vspace{0.2cm}
-
-\circled{6}\textit{API Layer:}
-    Provide all CCaaS services as reliable, highly available, and scalable API endpoints.
+\begin{itemize}
+    \item\textbf{AI Models:}
+        Build and offer the AI models for career counseling based on the data that LinkedIn has access to, including
+        user profiles, skills, educations, job postings, and feedback data from career counselors participating in CCaaS.
+    \item\textbf{API Layer:}
+        Provide all CCaaS services as reliable, highly available, and scalable API endpoints.
+    \item\textbf{Career Counselor Matchmaking:}
+        Matchmaking between career counselors band the clients based on their user profile data, the counselors' past
+        customers, geographic proximity, and other factors.
+    \item\textbf{Skills Assessment:} 
+        Skills assessment based on user profile data from LinkedIn, including gap analysis.
+    \item\textbf{Job Search \& Recommender:}
+        Search and recommend jobs based on similarity with the user's profile leveraging word embeddings and graph embeddings.
+    \item\textbf{Writing Assistant:}
+        Provide a writing assistant for preparing CVs and cover letters for job applications using generative AI
+        tools.
+    \item\textbf{Career Path Recommender:}
+        Recommend career paths based on the similarity of the user's profile and  similar users' career paths
+        leveraging graph embeddings.
+    \item\textbf{Training Recommender:}
+        Recommend trainings to a user based on profile and chosen career path (help user fill skill gaps
+        required for career path).
+\end{itemize}
 
 \subsection{Gain Creators}
 
@@ -171,13 +162,13 @@ part of the jobs to be done.
         Find job that matches &
             Counselor may not have relevant experience &
             Better insights through more \& granular data &
-            Job search \& recommendations\\ 
+            Job search \& recommendations; writing assistant for CV and cover letter\\ 
         \midrule
         
         Learn relevant skills &
             Insights into commonly successful career paths &
             Better insights through superior AI &
-            Training recommendations; career path recommendations\\ 
+            Skills assessment; training recommendations; career path recommendations\\ 
         \midrule
 
         Professional \& personal growth &
