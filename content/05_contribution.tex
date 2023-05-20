@@ -1,134 +1,113 @@
 \section{Contribution}
 \label{sec:contribution}
 
-\subsection{Business Idea}
+In the following, we will describe the details of how the business model of CCaaS exactly works.
+We will first describe the novelty of the solution, before taking a closer look at the functionality,
+the pricing and the system architecture of the offering.
 
-\subsubsection{Features of CCaaS}
+\subsection{Novelty}
 
-
-
-\subsection{Assessment of the Innovation}
-
-In the following, we assess the contribution of the CCaaS innovation from four different angles, namely the
-customer perspective, the technical perspective, the legal perspective, and the sustainability perspective.
-Through a multi-angled assessment, we can identify different types of contributions, risks and opportunities.
-Risks may render the innovation useless for the customer, financially unviable, or even illegal. As part of
-the assessment we can develop strategies to mitigate the identified risks and better exploit opportunities.
-
-\subsubsection{Customer Perspective}
-
-We have previously introduced the customer perspective on career counseling in Section \ref{sec:customer_perspective}.
-We extend here by embedding the innovation of AI-powered career counseling as a CCaaS API in the context of this 
-customer perspective. The following aspects are relevant in this context:
+The idea of offering career counseling as online services is not novel. Neither is the idea of
+using AI models to assess a person's skills and interests, or to recommend suitable jobs and training
+opportunities based on a user's profile. In fact, 44\% of jobs advertised on LinkedIn are already
+filled using skills data as part of the recruitment process \citep{kaserAIpoweredCareerCounseling2023}.
+This can typically be achieved by creating word embeddings of the job descriptions and the candidate's
+profile (i.e., converting both to vector space), and using a similarity measure between the
+vectors. Such vector similarity searches can even be implemented with off-the-shelf vector database
+software, such as Weaviate \citep{dilockerWeaviate2023}. However, the idea of offering a platform that
+provides career counseling as a service (CCaaS) is novel in several regards:
 
 \begin{itemize}
-    \item \textbf{Reduced Costs:} Career counseling is currently not affordable to many. The CCaaS model
-        will make career counseling accessible to a larger audience by reducing the costs of career
-        counseling through shared infrastructure and shared AI models. CCaaS may fuel further innovation by 
-        partners, such as e.g., making career counseling available online to people in remote areas.
-    \item \textbf{Personalized Service:} Through the deployment of AI models as part of CCaaS, career counselors 
-        will gain a better understanding of individual clients faster. This enables counselors to provide
-        a more personalized service without increasing costs.
-    \item \textbf{Assistive Technologies:} generative AI models can help job market entrants to write better CVs
-        and application letters. This may currently typically not be demanded by clients due to the excessive costs.
-        Generative AI can also be used as a chatbot interface to career counselors, thereby reducing the costs
-        of the initial contact with a career counselor.
-    \item \textbf{Avoiding Ethical Issues:} Ethical issues in AI-powered career counseling may include biased AI
-        models, the problem of ``blackbox'' AI models that are not explainable, and Kafkaesque interactions between
-        users and automated systems \citep{kaserAIpoweredCareerCounseling2023}. LinkedIn's CCaaS innovation will avoid 
-        these issues by using a human-in-the-loop approach where specialized career counselors are the interface 
-        to the client, while AI tools are used to assist the counselors in their work. The counselors can intervene
-        whenever they deem it necessary and add reasoned explanations to the recommendations given to clients.
+    \item the business model encourages co-creation of value based on data from LinkedIn and
+        personalized services from career counselors
+    \item the API layer enables integration with existing career counseling services
+    \item the API layer enables counselors to build their own applications on top of the platform
+    \item the API layer encourages a mix-and-match approach for career counseling companies, where
+        they can choose to use the AI models provided by CCaaS, use their own AI models for certain 
+        use cases, or combine the CCaaS API services with services from other APIs (e.g., integrating 
+        the training recommendation service with a training provider's API such as Coursera)
+    \item CCaaS leverages on the data of LinkedIn to create the best AI models for career
+        counseling
+    \item the (heavy) investment in training AI models is shared across all users of the platform
+        via the API fees
+    \item the API approach could fuel further innovation by enabling third-party developers to
+        build their own applications on top of the platform, including building applications for 
+        niche markets
 \end{itemize}
 
+\subsection{Features}
 
-\subsubsection{Technical Perspective}
+Figure \ref{fig:blueprint_entrant} shows the service blueprint for the customer journey of a job
+market entrant using career counseling via CCaaS. A service blueprint is a tool for service design
+that describes the customer journey from the customer's perspective and how it connects to the 
+frontstage, backstage, and internal support services. The customer journey starts with the job market
+entrant matching with a counselor via the LinkedIn matchmaking web application. By choosing a counselor,
+the user automatically grants access to its user profile data via the CCaaS API. The counselor can
+then access the user's profile data via the API and start the actual counseling process. The counseling
+process consists of an assessment of skills and values, retrieving job recommendations, and helping
+the client choose the job ads to apply for. The writing assistance service---which is embedded in the 
+existing job application forms on LinkedIn---helps the client to write a CV and application letter.
+Finally, clients and counselors can leave feedback on the recommendations and the counseling process
+via the LinkedIn matchmaking web application.
 
-According to \cite{dornbergerDigitalInnovationDigital2021} technology can play two roles in the context of innovation
-and transformation: new technologies can be enablers of innovation (``digital innovation''), or technology can be 
-required to implement business or management ideas, such as digital ecosystems (``digital business transformation'').
-In the case of CCaaS, we have technology as enabler, i.e., progress in computational power has fueled a renaissance
-of sub-symbolic AI and deep learning in particular. On the other hand, technology---such as shared cloud computing
-infrastructure---has brought costs down and makes it possible to viably offer new business models based on AI,
-thereby enabling digital business transformation.
-
-The CCaaS business model builds upon the availability of large amounts of user data and data science know-how.
-The following technical aspects are particularly relevant in relation to career counseling as CCaaS offering:
-
-\begin{itemize}
-    \item \textbf{Data:} LinkedIn already has one of the largest---if not the largest---user database 
-        on education, work experience, skills, companies and jobs. In particular, LinkedIn has collected
-        verifiable information on the skills of its users: user can add skills to their profile and
-        verify these skills by taking skill assessments quizzes \citep{kaserAIpoweredCareerCounseling2023}.
-        Users that pass the quiz are awarded a skills badge that is displayed on their profile page.
-    \item \textbf{Data Science:} The CCaaS platform will use AI models to provide
-        recommendations for trainings and career paths. Through its parent company Microsoft,
-        LinkedIn has access to computational resources and highly skilled data scientists and AI 
-        researchers. Further, Microsoft owns a considerable stake in OpenAI, the creator of 
-        ChatGPT, DALL-E, and other state-of-the-art AI models.
-    \item \textbf{Cloud Computing:} Access to computational resources is a key requirement for training
-        AI models and running them in production. Through its parent company Microsoft, LinkedIn has
-        access to massive cloud computing resources, including GPUs from Microsoft Azure. Further,
-        technical progress such as quantum computing may unleash manyfold more powerful computation 
-        with much lower energy requirements in the near future.
-\end{itemize}
+\begin{figure}
+    \centering
+    \caption{Service blueprint for the job market entry customer journey. Blue: LinkedIn, orange: counselors (own illustration).}
+    \label{fig:blueprint_entrant}
+    \includegraphics[width=\textwidth]{blueprint_entrant.pdf}
+\end{figure}
 
 
-\subsubsection{Legal Perspective}
 
-The following legal aspects are relevant in relation to career counseling and the CCaaS business model:
+\subsection{Pricing}
 
-\begin{itemize}
-    \item \textbf{Data Protection:} data protection is a key concern in career counseling as it is 
-        centered on data about the education, work experience, skills, character traits, and personal 
-        interests of the clients. Regulations such as the General Data Protection Regulation (GDPR) of
-        the European Union \citep{europeanparliamentRegulationEU20162016} or the California Consumer
-        Privacy Act (CCPA) \citep{californiastatelegislatureTitle81California2018} must be strictly followed
-        in order to shield LinkedIn and the counselors from the risks of legal action. In the case of 
-        CCaaS, we use data that has been provided by users to LinkedIn already. Further, users have to
-        proactively opt in to career counseling services by using the career counselor matchmaking service:
-        only counselors chosen by the client will have access to that client's data.
-        Tighter regulations and differing legislations may mean that LinkedIn may have to offer regional
-        versions of CCaaS that are operated in local data centers with a subset of the data from users of
-        the same region (e.g., CCaaS Europe, CCaaS North America, etc.). This may affect the quality of 
-        recommendations, but would affect competing services equally.
-    \item \textbf{Liability:} the CCaaS platform provides recommendations for trainings and career
-        paths. Because the CCaaS model does not promote full automation but rather a human-in-the-loop
-        approach where specialized career counselors make the final recommendations, LinkedIn is not 
-        liable for the outcome of the final recommendations given to users. However, the CCaaS platform
-        should be liable for any damage caused to counselors based on downtimes of the CCaaS API. Downtimes 
-        can be mitigated by well-known strategies for information system design such as redundancy, load
-        balancing, and failover of traffic.
-    \item \textbf{Intellectual Property:} the CCaaS platform will use AI models to provide
-        recommendations for trainings and career paths. These AI models are based on data collected
-        from the users as well as feedback data from counselors. There are currently open questions
-        regarding who owns the intellectual property of such models trained on user data, see e.g.,
-        \citep{anwerIPChallengesDatafueled2021}. LinkedIn should onboard counselors using contracts 
-        that transfer all IP rights of the feedback data to LinkedIn.
-\end{itemize}
+The pricing model for CCaaS is based on a pay-per-use model, where the API usage is metered and
+charged to the counseling companies on a monthly basis. Each call on the API layer is logged via
+the message broker and a logging microservice. A separate microservice is connected with the billing
+and charging system of LinkedIn, and issues a monthly bills to the counseling companies based on
+the effective API usage in that month. API requests can have different prices per request, depending
+on which API endpoint is used (i.e., what microservice is called). The pricing model is based on
+the value that the API endpoint provides to the counseling companies and the complexity of the 
+AI models that are underlying the service. 
 
 
-\subsubsection{Sustainability Perspective}
+\subsection{System Architecture}
 
-Sustainability is a vast topic. To guide its analysis, the Sustainability Development Goals (SDGs) are a
-good starting point. SDGs are a set of 17 goals defined by the United Nations in 2015 to achieve a better,
-equitable and sustainable future by 2030 \citep{unitednationsTransformingOurWorld2015a}. The following SDGs
-are of particular interest in relation to career counseling and the CCaaS business model:
+CCaaS is built as a series of microservices that each handle different types of recommendation
+tasks using narrow AI models specifically designed and trained for that task. The services are 
+built along the lines of the core value proposition of CCaaS identified in Sections \ref{sec:enablers}
+\& \ref{sec:business_model}, namely providing career assessments, career path recommendations, training
+recommendations, job recommendations, and writing assistance for CVs and application letters. The
+microservices' architecture enables containers to be deployed and scaled independently. They are
+connected via a message broker that handles the communication between the services and persistent
+storage engines (e.g., to store newly created recommendations and log API requests). Two additional
+microservices are responsible for the metering of the API usage and the billing and charging of the
+API usage fees to the counseling companies. A web application serves as the gatekeeper between
+counselors and clients: clients can choose which counselors they want to work with (matchmaking)
+as well as grant access to their LinkedIn profile data to the chosen counselor, so that counselors 
+can then subsequently access the client's data via the API and retrieve user-specific recommendations.
 
-\begin{itemize}
-    \item \textbf{Goal 4, Quality Education:} CCaaS decreases the cost of professional and personalized
-        career counseling, including assessment of skills and recommendations for training, thereby
-        contributing to a better education for all.
-    \item \textbf{Goal 5, Gender Equality:} with a proper design of the AI models, CCaaS can reduce 
-        gender-related biases in recommendations of jobs, trainings and career paths.
-    \item \textbf{Goal 8, Decent Work and Economic Growth:} CCaaS can help people to find a job that
-        matches their skills and interests. This can increase the productivity of the workforce and
-        reduce the unemployment rate, while maximizing the income and satisfaction of the employees.
-    \item \textbf{Goal 10, Reduced Inequalities:} CCaaS can help to reduce inequalities by providing
-        career counseling to people who previously could not afford it. Further, through proper design
-        of the AI models, suitable trainings and career paths can be specifically tailored to the
-        needs of underrepresented groups. However, career counseling is a service that is typically
-        relevant for people who already have higher education. Widespread and affordable career
-        counseling via CCaaS may hence contribute to widening the gap that is building between the
-        highly educated workforce and the low-skilled workforce.
-\end{itemize}
+A separate system entails the data extraction, transformation and loading (ETL) pipelines that load 
+and transforms user data and job data, and ingest them into a distributed large data storage layer
+(data lake). The data lake is used to provide large volumes of data in the right format that is 
+required to train the AI models. Training of the AI models happens on a cluster of GPU servers. As
+introduced in the Section \ref{sec:business_model}, the GPU server farm is provided by the parent
+company Microsoft via Azure cloud computing services. The trained models are then deployed to the
+microservices that are responsible for the actual recommendation tasks. The overall system architecture
+is shown in Figure~\ref{fig:system_architecture} using the C4 modelling language for software architecture
+\citep{brownC4ModelVisualising2010}.
+
+
+
+
+
+\begin{landscape}
+    \begin{figure}
+        \centering
+        \caption{CCaaS system architecture in C4 Level 2 notation (own illustration).}
+        \label{fig:system_architecture}
+        \includegraphics[width=\textwidth]{figures/c4_system_architecture.pdf}
+    \end{figure}        
+\end{landscape}
+
+
