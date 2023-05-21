@@ -18,60 +18,126 @@ software, such as Weaviate \citep{dilockerWeaviate2023}. However, the idea of of
 provides career counseling as a service (CCaaS) is novel in several regards:
 
 \begin{itemize}
-    \item the business model encourages co-creation of value based on data from LinkedIn and
-        personalized services from career counselors
-    \item the API layer enables integration with existing career counseling services
-    \item the API layer enables counselors to build their own applications on top of the platform
-    \item the API layer encourages a mix-and-match approach for career counseling companies, where
-        they can choose to use the AI models provided by CCaaS, use their own AI models for certain 
+    \item The CCaaS business model encourages co-creation of value based on data from LinkedIn and
+        personalized services from career counselors.
+    \item Offering CCaaS via an API layer enables integration with existing career counseling services.
+    \item The CCaaS API layer enables counselors to build their own applications on top of the platform.
+    \item Using the CCaaS API layer career counseling companies are encouraged to use a mix-and-match approach,
+        where they can choose to use the AI models provided by CCaaS, use their own AI models for certain 
         use cases, or combine the CCaaS API services with services from other APIs (e.g., integrating 
-        the training recommendation service with a training provider's API such as Coursera)
-    \item CCaaS leverages on the data of LinkedIn to create the best AI models for career
-        counseling
-    \item the (heavy) investment in training AI models is shared across all users of the platform
-        via the API fees
-    \item the API approach could fuel further innovation by enabling third-party developers to
+        the training recommendation service with a training provider's API such as Coursera).
+    \item The CCaaS business model leverages on the unique database of LinkedIn to create the best AI
+        models for career counseling, while encouraging feedback data from the community of counselors
+        and clients to further improve the AI models.
+    \item Heavy investments in training the AI models is shared across all users of the platform
+        via the API usage fees.
+    \item The CCaaS API approach could fuel further innovation by enabling third-party developers to
         build their own applications on top of the platform, including building applications for 
-        niche markets
+        niche markets.
 \end{itemize}
 
-\subsection{Features}
+\subsection{Customer Journey Design}
 
 Figure \ref{fig:blueprint_entrant} shows the service blueprint for the customer journey of a job
-market entrant using career counseling via CCaaS. A service blueprint is a tool for service design
-that describes the customer journey from the customer's perspective and how it connects to the 
-frontstage, backstage, and internal support services. The customer journey starts with the job market
-entrant matching with a counselor via the LinkedIn matchmaking web application. By choosing a counselor,
-the user automatically grants access to its user profile data via the CCaaS API. The counselor can
-then access the user's profile data via the API and start the actual counseling process. The counseling
-process consists of an assessment of skills and values, retrieving job recommendations, and helping
-the client choose the job ads to apply for. The writing assistance service---which is embedded in the 
-existing job application forms on LinkedIn---helps the client to write a CV and application letter.
-Finally, clients and counselors can leave feedback on the recommendations and the counseling process
-via the LinkedIn matchmaking web application.
+market entrant using career counseling via CCaaS. The service blueprint is a tool for service design
+that describes the customer journey in terms of user actions and was introduced by \citet{shostackDesigningServicesThat1984}.
+The service blueprint shows how the user actions connect to the frontstage, backstage, and internal
+support services. User interactions are the actual actions undertaken by the customer to request or
+consume the service, frontstage includes the visible touchpoints with the customer, while backstage
+includes the processes that are not visible to the customer but utilized to render the service to the
+customer. Finally, internal support services include the processes that are not visible to the customer
+and not directly involved in the service delivery, but are required to support the service delivery.
 
-\begin{figure}
+The customer journey starts with the job market entrant (i.e., client) matching with a counselor
+via the LinkedIn matchmaking web application. By choosing a counselor, the client automatically
+grants access to its LinkedIn user profile data via the CCaaS API. The counselor can then access
+the client's user profile data and start the actual counseling process. The counseling process
+consists of an assessment of skills and values, retrieving job recommendations, and helping the
+client choose the jobs to apply for using the profile data and leveraging on the CCaaS services
+API endpoints. The writing assistance service---which is embedded in the existing job application
+forms on LinkedIn---helps the client to write a better CV and application letters tailored to the
+advertised positions and the client's profile. Finally, clients and counselors can leave feedback
+on the recommendations and the counseling process via the LinkedIn matchmaking web application.
+This feedback data flows back into the AI model training process.
+
+\begin{figure}[h!]
     \centering
     \caption{Service blueprint for the job market entry customer journey. Blue: LinkedIn, orange: counselors (own illustration).}
     \label{fig:blueprint_entrant}
     \includegraphics[width=\textwidth]{blueprint_entrant.pdf}
 \end{figure}
 
+To understand the full extent of the CCaaS offering, we also need to look at the customer journey
+for a career transition. This customer journey aims at optimizing the career path of a client and
+starts with a renewed assessment (leaving the counselor matchmaking aside). Based on the assessment
+an optimal career path can be identified. However, the client may lack some skills or certifications
+to advance in this new career path. This calls for an additional service of training recommendations
+so that such skills gaps can be filled. Once the client has completed its additional training, the
+counselor and AI models can help the client to find suitable jobs in the new career path. Finally,
+counselors and clients can again leave feedback data for LinkedIn on the services and recommendations.
+Figure \ref{fig:blueprint_transition} shows the service blueprint for the customer journey of a 
+career transition.
+
+\begin{figure}[h!]
+    \centering
+    \caption{Service blueprint for the career transition customer journey. Blue: LinkedIn, orange: counselors (own illustration).}
+    \label{fig:blueprint_transition}
+    \includegraphics[width=\textwidth]{blueprint_transition.pdf}
+\end{figure}
 
 
 \subsection{Pricing}
 
 The pricing model for CCaaS is based on a pay-per-use model, where the API usage is metered and
 charged to the counseling companies on a monthly basis. Each call on the API layer is logged via
-the message broker and a logging microservice. A separate microservice is connected with the billing
-and charging system of LinkedIn, and issues a monthly bills to the counseling companies based on
-the effective API usage in that month. API requests can have different prices per request, depending
-on which API endpoint is used (i.e., what microservice is called). The pricing model is based on
-the value that the API endpoint provides to the counseling companies and the complexity of the 
-AI models that are underlying the service. 
+a message broker and a logging microservice (see Subsection \ref{subsec:system_architecture}).
+A separate microservice is connected with the billing and charging system of LinkedIn, and issues monthly
+bills to the counseling companies based on the effective API usage in that month. API requests
+can have different prices per request, depending on which API endpoint is used (i.e., what microservice
+is called). The pricing model is based on the value that the API endpoint provides to the counseling
+companies and the complexity of the AI models that are underlying the service. Table \ref{tab:pricing}
+shows the proposed pricing model.
+
+\begin{table}[h!]
+    \centering
+    \caption{API usage pricing by CCaaS API endpoint.}
+    \label{tab:pricing}
+
+    \tiny
+    \renewcommand{\arraystretch}{1.1}
+    \small\setlength\tabcolsep{8pt}
+
+    \begin{tabularx}{0.6\linewidth}{X X}
+        \toprule
+        \textbf{API Endpoint} &
+            \textbf{Price} \\
+        \toprule
+
+        Retrieve user data &
+            1.00 USD p. user\\ 
+        \midrule
+        
+        Skills and values assessment &
+            5.00 USD p. assessment\\ 
+        \midrule
+
+        Job recommendation &
+            0.10 USD p. job\\ 
+        \midrule
+
+        Training recommendation &
+            1.00 USD p. training\\
+        \midrule
+
+        Career path recommendation &
+            15.00 USD p. career path\\ 
+        \bottomrule
+    \end{tabularx}
+\end{table}
 
 
 \subsection{System Architecture}
+\label{subsec:system_architecture}
 
 CCaaS is built as a series of microservices that each handle different types of recommendation
 tasks using narrow AI models specifically designed and trained for that task. The services are 
