@@ -3,3 +3,5 @@ entrepreuneurship-related
 CCaaS
 MLOps
 frontstage
+Adner
+ChatGPT

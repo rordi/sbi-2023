@@ -60,13 +60,6 @@ advertised positions and the client's profile. Finally, clients and counselors c
 on the recommendations and the counseling process via the LinkedIn matchmaking web application.
 This feedback data flows back into the AI model training process.
 
-\begin{figure}[h!]
-    \centering
-    \caption{Service blueprint for the job market entry customer journey. Blue: LinkedIn, orange: counselors (own illustration).}
-    \label{fig:blueprint_entrant}
-    \includegraphics[width=\textwidth]{blueprint_entrant.pdf}
-\end{figure}
-
 To understand the full extent of the CCaaS offering, we also need to look at the customer journey
 for a career transition. This customer journey aims at optimizing the career path of a client and
 starts with a renewed assessment (leaving the counselor matchmaking aside). Based on the assessment
@@ -77,14 +70,6 @@ counselor and AI models can help the client to find suitable jobs in the new car
 counselors and clients can again leave feedback data for LinkedIn on the services and recommendations.
 Figure \ref{fig:blueprint_transition} shows the service blueprint for the customer journey of a 
 career transition.
-
-\begin{figure}[h!]
-    \centering
-    \caption{Service blueprint for the career transition customer journey. Blue: LinkedIn, orange: counselors (own illustration).}
-    \label{fig:blueprint_transition}
-    \includegraphics[width=\textwidth]{blueprint_transition.pdf}
-\end{figure}
-
 
 \subsection{Pricing}
 
@@ -140,6 +125,25 @@ shows the proposed pricing model.
         \bottomrule
     \end{tabularx}
 \end{table}
+
+\begin{landscape}
+    \begin{figure}[h!]
+        \centering
+        \caption{Service blueprint for the job market entry customer journey. Blue: LinkedIn, orange: counselors (own illustration).}
+        \label{fig:blueprint_entrant}
+        \includegraphics[width=\textwidth]{blueprint_entrant.pdf}
+    \end{figure}
+    
+    \newpage
+
+    \begin{figure}[h!]
+        \centering
+        \caption{Service blueprint for the career transition customer journey. Blue: LinkedIn, orange: counselors (own illustration).}
+        \label{fig:blueprint_transition}
+        \includegraphics[width=\textwidth]{blueprint_transition.pdf}
+    \end{figure}
+\end{landscape}
+
 
 Based on the pricing and estimated usage proportion of each API endpoint, we can estimate the
 average price per API request to be 1.075 USD. Further, each market entry customer journey may
