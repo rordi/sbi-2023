@@ -107,34 +107,50 @@ shows the proposed pricing model.
     \renewcommand{\arraystretch}{1.1}
     \small\setlength\tabcolsep{8pt}
 
-    \begin{tabularx}{0.6\linewidth}{X X}
+    \begin{tabularx}{0.8\linewidth}{X X X}
         \toprule
         \textbf{API Endpoint} &
-            \textbf{Price} \\
+        \textbf{Price} &
+            \textbf{Proportion of Requests} \\
         \toprule
 
         Retrieve user data &
-            1.00 USD p. user\\ 
+            1.00 USD p. user &
+            20\% \\ 
         \midrule
         
         Skills and values assessment &
-            5.00 USD p. assessment\\ 
+            3.00 USD p. assessment &
+            15\% \\ 
         \midrule
 
         Job recommendation &
-            0.10 USD p. job\\ 
+            0.25 USD p. job &
+            50\% \\ 
         \midrule
 
         Training recommendation &
-            1.00 USD p. training\\
+            0.50 USD p. training &
+            10\% \\
         \midrule
 
         Career path recommendation &
-            15.00 USD p. career path\\ 
+            5.00 USD p. career path &
+            5\% \\ 
         \bottomrule
     \end{tabularx}
 \end{table}
 
+Based on the pricing and estimated usage proportion of each API endpoint, we can estimate the
+average price per API request to be 1.075 USD. Further, each market entry customer journey may
+bring revenues of 9.00 USD, considering that it may need 20 job recommendations in average. The
+writing assistance for CVs and application letters is free to use as it is not embedded in the
+CCaaS API but in the LinkedIn job application forms. The career transition customer journey may
+bring revenues of 15.50 USD, considering that it may need 5 training recommendations and 20 job
+recommendations in average. The market entry customer journey is expected to be used more often
+than the career transition customer journey, as the latter is only relevant for a subset of the
+market entry customers. The average revenue per customer journey is thus estimated to be 10.95 USD,
+considering 70\% market entry customer journeys and 30\% career transition customer journeys.
 
 \subsection{System Architecture}
 \label{subsec:system_architecture}
@@ -162,10 +178,6 @@ company Microsoft via Azure cloud computing services. The trained models are the
 microservices that are responsible for the actual recommendation tasks. The overall system architecture
 is shown in Figure~\ref{fig:system_architecture} using the C4 modelling language for software architecture
 \citep{brownC4ModelVisualising2010}.
-
-
-
-
 
 \begin{landscape}
     \begin{figure}
