@@ -1,0 +1,1 @@
+{"rule":"MISSING_TO_BEFORE_A_VERB","sentence":"^\\QNeeds encompass gains and pains of the customer segments, while drivers encompass societal, technological and environmental trends and developments that make this business model possible.\\E$"}
